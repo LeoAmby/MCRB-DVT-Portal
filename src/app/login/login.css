@@ -20,7 +20,7 @@ body {
     border-radius: 20px;
     backdrop-filter:blur(18px);
     background: rgba(240, 237, 232, 0.15);
-    border: 1px solid rgba(255,255,255,.2);
+    border: 1px solid rgba(255,255,255,.3);
     color:#fff;
 }
 .inpt {
@@ -64,4 +64,8 @@ h1 {
 .logo img {
  width:250px;  
  height:auto;
+}
+
+hr {
+    color: #FBB41E;
 }

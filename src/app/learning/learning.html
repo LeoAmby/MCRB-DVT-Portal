@@ -1,0 +1,18 @@
+<p>learning works!</p>
+<input (input)="changeColor($event)"  type="text" placeholder="enter color">
+<br><br>
+<!-- <button>Set User name</button> -->
+<button id="trial" (click)="handleColor('green')" style="cursor:pointer">Color</button>
+
+@switch(color){
+    @case('red'){
+        <h1 style="background-color:red;">Nyekundu</h1>
+    }
+    @case('blue'){
+        <h1 style="background-color:blue;">buluu</h1>
+
+    }@default{
+        <h1 style="background-color:black; color:white;">Nyeusi</h1>
+
+    }
+}

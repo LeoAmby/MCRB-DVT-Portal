@@ -2,16 +2,32 @@
     <div class="login-card">
 
 <div class="logo" ><img src="/images/mcrb.png" alt="MCRB Logo"></div>
+<hr>
 <h1>Welcome to MCRB-DVT Portal</h1>
 <p style="text-align: justify;">An Easy way for your institution to submit data to Metropol CRB.
     Please don't hesitate to contact us if need be at data@metropol.co.ke if you have questions or suggestions. We love them both equally!
     </p>
 
-<input class="inpt" type="email" placeholder="Enter Username">
+<input (input)="enterUsrName($event)" class="inpt" type="email" placeholder="Enter Username">
 <br>
 <input class="inpt" type="password" placeholder="Password">
 <br>
 <p style="text-align: right;"><a style="cursor:pointer;">Forgot password <img style="width:15px;" src="/images/qmark.png"></a></p>
 <button class="btn" style="justify-content:center;" >Sign in</button>
 </div>
+</div>
+
+<div class="weplay">
+    <button (click)="toggle()">Let's see</button>
+    <button (click)="show()">Show</button>
+    <button (click)="hide()">Hide</button>
+
+    @if(display){
+       <div style="background-color:aqua; height:100px; width:100px;" ></div>
+    }
+
+    <!-- @for(student of students;track student.email){
+        <h2>{{student.name}}</h2> 
+        <h1>{{student.email}}</h1>
+    } -->
 </div>
