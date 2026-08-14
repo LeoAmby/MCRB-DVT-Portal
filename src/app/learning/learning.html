@@ -16,3 +16,17 @@
 
     }
 }
+<div class="weplay">
+    <button (click)="toggle()">Let's see</button>
+    <button (click)="show()">Show</button>
+    <button (click)="hide()">Hide</button>
+
+    @if(display){
+       <div style="background-color:aqua; height:100px; width:100px;" ></div>
+    }
+
+    <!-- @for(student of students;track student.email){
+        <h2>{{student.name}}</h2> 
+        <h1>{{student.email}}</h1>
+    } -->
+</div>

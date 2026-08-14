@@ -1,4 +1,74 @@
 /* You can add global styles to this file, and also import other style files */
-.body {
+body {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    background: yellow;
     background-color:navy;
+
+}
+
+.background {
+    height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-image:url('/images/bg.jpg');
+    background-size:cover;
+    background-position: center;
+}
+.login-card {
+    width:420px;
+    padding:40px;
+    border-radius: 20px;
+    backdrop-filter:blur(18px);
+    background: rgba(240, 237, 232, 0.15);
+    border: 1px solid rgba(255,255,255,.3);
+    color:#fff;
+}
+.inpt {
+    /* border:1px solid #000;
+    padding:1em;
+    margin:2em;
+    border-radius: 1em; */
+
+
+    width:100%;
+    padding:15px;
+    margin-bottom:20px;
+    border:none;
+    border-radius:30px;
+    background:rgba(255,255,255,.2);
+    color:rgb(243, 237, 237);
+    outline:none;
+}
+
+.btn {
+    background-color: #FBB41E;
+    padding:1em;
+    border-radius: 30px;
+    width:100%;
+    justify-content: center;
+    cursor:pointer;
+}
+h1 {
+    text-align:center;
+    margin-bottom:30px;
+    font-weight:400;
+    color:#FBB41E;
+}
+
+.logo {
+    display: flex;
+    justify-content:center;
+    margin-bottom: 20px;
+}
+
+.logo img {
+ width:250px;  
+ height:auto;
+}
+
+hr {
+    color: #FBB41E;
 }
