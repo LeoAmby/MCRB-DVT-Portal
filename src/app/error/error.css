@@ -1,0 +1,25 @@
+.error {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-width:100vh ;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 12em;
+}
+
+p {
+    font-size: 2em;
+    margin-top: 0;
+    color:#fff;
+}
+
+button {
+    background-color: #f0b746;
+    padding:1em;
+    width:20em;
+    border-radius: 5em;
+}
