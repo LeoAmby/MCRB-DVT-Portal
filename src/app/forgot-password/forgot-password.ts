@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { FormGroup, FormControl, ReactiveFormsModule } from '@angular/forms';
+import { FormGroup, FormControl, ReactiveFormsModule, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-forgot-password',
@@ -13,7 +13,9 @@ import { FormGroup, FormControl, ReactiveFormsModule } from '@angular/forms';
 export class ForgotPassword {
   forgotPassForm = new FormGroup({
   
-    email: new FormControl(''),
+    email: new FormControl('', [
+      Validators.required,
+      Validators.email]),
 
   });
  
