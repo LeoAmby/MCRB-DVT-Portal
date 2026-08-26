@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { FormGroup, FormControl, ReactiveFormsModule } from '@angular/forms';
+import { FormGroup, FormControl, ReactiveFormsModule, Validators } from '@angular/forms';
 
 
 
@@ -14,12 +14,17 @@ import { FormGroup, FormControl, ReactiveFormsModule } from '@angular/forms';
 export class Login {
 
   loginForm = new FormGroup({
-    username: new FormControl(),
-    password: new FormControl(),
+    email: new FormControl('', [
+      Validators.required,
+      Validators.email]),
+    password: new FormControl('', [
+      Validators.required,
+      Validators.minLength(6),
+      Validators.maxLength(15)]),
 
   })
-
+ 
  signin(){
-  this.loginForm.value
+  console.log(this.loginForm.value);
  } 
 }
