@@ -34,5 +34,7 @@ export class Login {
 
  signin(){
   console.log(this.loginForm.value);
+  const username = this.loginForm.getRawValue().email;
+  const password = this.loginForm.getRawValue().password;
  } 
 }
