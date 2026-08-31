@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { FormGroup, FormControl, ReactiveFormsModule, Validators } from '@angular/forms';
 import { NgIf } from '@angular/common';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-login',
@@ -36,5 +37,20 @@ export class Login {
   console.log(this.loginForm.value);
   const username = this.loginForm.getRawValue().email;
   const password = this.loginForm.getRawValue().password;
+
+  this.http.post<any>('http:192.168.20.188/api/v1/datasubmission/login', {email: this.email, password: this.password}).subscribe({
+    next: (res) => {
+      const access_token = res.access_token
+
+      localStorage.setItem('access_token', access_token)
+
+      this.router.navigate(['/user-management']);
+    },
+
+    error: (err) => {
+      
+    }
+
+  })
  } 
 }
