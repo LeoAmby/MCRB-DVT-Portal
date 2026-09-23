@@ -10,11 +10,11 @@
     
 <form [formGroup]="loginForm" (ngSubmit)="signin()">
 <input  class="inpt" type="email" placeholder="Enter email" formControlName="email" >
-<span style="color:red;" *ngIf="email?.hasError('required')">* Required</span>
+<span style="color:red;" *ngIf="email?.hasError('required')">* Required!</span>&nbsp;
 <span style="color:red;" *ngIf="email?.invalid && (email?.dirty || email?.touched)">Please enter a valid Email</span>
 <br>
 <input class="inpt" type="password" placeholder="Password" formControlName ='password'>
-<span style="color:red;" *ngIf="password?.hasError('required')">* Required</span>
+<span style="color:red;" *ngIf="password?.hasError('required')">* Required!</span>&nbsp;
 <span style="color:red;" *ngIf="password?.invalid && (password?.dirty || password?.touched)">Enter the Correct Password</span>
 <br>
 <p style="text-align: right;"><a routerLink="/forgot-password" style="cursor:pointer; color:white; text-decoration:none;">Forgot password </a><img style="width:15px;" src="/images/qmark.png"></p>

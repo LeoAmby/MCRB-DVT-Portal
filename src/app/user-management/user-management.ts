@@ -7,3 +7,4 @@ import { Component } from '@angular/core';
   styleUrl: './user-management.css',
 })
 export class UserManagement {}
+
